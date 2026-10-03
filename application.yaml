@@ -7,11 +7,12 @@ spec:
     namespace: app
     server: https://kubernetes.default.svc
   source:
+    path: .
     repoURL: https://github.com/AbhiramVijayan/argocd
     targetRevision: HEAD
   project: default
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
+      prune: true
+      selfHeal: true
       enabled: true
